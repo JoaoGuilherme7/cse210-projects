@@ -34,7 +34,7 @@ class Program
         }
 
         Console.WriteLine($"sum: {sum} ");
-        Console.WriteLine($"Average: {(float)sum / (numbers.Count-1)} ");
+        Console.WriteLine($"Average: {(float)sum / numbers.Count} ");
         Console.WriteLine($"Largest number {largest}");
 
         if(smallest > 0 )   Console.WriteLine($"The smallest positive is : {smallest}");
