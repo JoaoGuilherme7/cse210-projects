@@ -9,8 +9,8 @@ class Program
 
         while (again == "1")
         {
-            Console.Write("What is the magic number? ");
-            magic = int.Parse(Console.ReadLine());
+            magic = new Random().Next(1, 101);
+            Console.WriteLine("\nGuess the number between 1 and 100\n");
             number = magic + 1;
             attempts = 0;
 
