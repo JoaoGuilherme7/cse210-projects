@@ -31,6 +31,9 @@ class Scripture
             {
                 word.Hide();
                 i++;
+                if (this.IsCompletelyHidden())
+                    i = numberToHide;
+
             }
         }
 
@@ -47,10 +50,9 @@ class Scripture
     }
     public bool IsCompletelyHidden()
     {
-        string text = this.GetDisplayText();
-        foreach (char l in text)
+        foreach (Word word in this._words)
         {
-            if (l != '_' || l != ' ')
+            if (!word.IsHidden())
                 return false;
         }
 

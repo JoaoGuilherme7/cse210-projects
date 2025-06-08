@@ -8,6 +8,7 @@ class Word
     public Word(string word)
     {
         this._text = word;
+        this._isHidden = false;
     }
 
     public void Hide()
