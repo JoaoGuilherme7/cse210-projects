@@ -1,5 +1,4 @@
-using System;
-
+//Made the functionality of ensuring there'll be no repeated questions in the ReflectingActivity.
 class Program
 {
     static void Main(string[] args)
