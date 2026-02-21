@@ -19,6 +19,7 @@ class GoalManager
             DisplayMenu();
             Console.WriteLine("Select a choice from the menu: ");
             choice = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
             if (choice == 1) CreateGoal();
             else if (choice == 2) ListGoalNames();
@@ -38,9 +39,10 @@ class GoalManager
 
     public void ListGoalNames()
     {
-        foreach (var goal in this._goals)
+
+        foreach (var (goal, index) in this._goals.Select((goal, index) => (goal, index)))
         {
-            Console.WriteLine(goal.GetDetailsString());
+            Console.WriteLine(index + ". " + goal.GetDetailsString());
         }
     }
 
@@ -104,7 +106,7 @@ class GoalManager
         if (goalIndex >= 0 && goalIndex < this._goals.Count)
         {
             Goal goal = this._goals[goalIndex];
-            
+
             if (goal.IsComplete())
             {
                 Console.WriteLine("This goal is already complete.");
