@@ -6,14 +6,5 @@ class Program
     {
         GoalManager manager = new GoalManager();
         manager.Start();
-
-        
-
-        manager.DisplayPlayerInfo();
-        manager.ListGoalNames();
-        manager.ListGoalDetails();
     }
-
-    
-
 }

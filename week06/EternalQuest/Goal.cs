@@ -2,19 +2,24 @@ using System;
 
 abstract class Goal
 {
-    protected string _shortName;
+    protected string _name;
     protected string _description;
-    protected string _points;
+    protected int _points;
 
-    public Goal(string name, string description, string points)
+    public Goal(string name, string description, int points)
     {
-        this._shortName = name;
+        this._name = name;
         this._description = description;
         this._points = points;
     }
 
-    public abstract void RecordEvent();
+    public abstract int RecordEvent();
     public abstract bool IsComplete();
     public abstract string GetDetailsString();
     public abstract string GetStringRepresentation();
+
+    public int GetPoints()
+    {
+        return this._points;
+    }
 }
